@@ -1,4 +1,4 @@
 .idea/
 *.pyc
-config.py
+src/config.py
 untitled\ text.txt
