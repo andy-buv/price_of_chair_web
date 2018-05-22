@@ -1,4 +1,6 @@
 .idea/
 *.pyc
 src/config.py
-untitled\ text.txt
+instance
+bin
+include

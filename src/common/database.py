@@ -1,16 +1,16 @@
-import os
-
+from instance import config
 import pymongo
 
 
+
 class Database(object):
-    URI = os.environ.get("MONGOLAB_URI")
+    URI = config.MONGOLAB_URI
     DATABASE = None
 
     @staticmethod
     def initialize():
         client = pymongo.MongoClient(Database.URI)
-        Database.DATABASE = client.get_default_database()
+        Database.DATABASE = client[config.DATABASE]
 
     @staticmethod
     def insert(collection, data):

@@ -1,10 +1,11 @@
 from flask import Flask, render_template
 from src.common.database import Database
+from instance import config
 
 
 app = Flask(__name__)
 app.config.from_object('src.config')
-app.secret_key = "123"
+app.secret_key = config.APP_SECRET_KEY
 
 
 @app.before_first_request

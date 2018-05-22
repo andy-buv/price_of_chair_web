@@ -1,6 +1,6 @@
-import os
+from instance import config
 
 DEBUG = True
 ADMINS = frozenset([
-    os.environ.get('ADMIN_EMAIL')
+    config.ADMIN_EMAIL
 ])

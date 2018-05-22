@@ -1,7 +1,7 @@
-import os
+from instance import config
 
-URL = os.environ.get('MAILGUN_URL')
-API_KEY = os.environ.get('MAILGUN_API_KEY')
-FROM = os.environ.get('MAILGUN_FROM')
+URL = config.MAILGUN_URL
+API_KEY = config.MAILGUN_API_KEY
+FROM = config.MAILGUN_FROM
 ALERT_TIMEOUT = 10
 COLLECTION = "alerts"
